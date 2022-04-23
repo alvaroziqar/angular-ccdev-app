@@ -1,4 +1,8 @@
-<div *ngFor="let post of posts$ | async; trackBy: trackByFn" class="post p-4">
-  <h3>#{{ post.id }} {{ post.title }}</h3>
-  <p>{{ post.body }}</p>
+<div class="d-flex align-items-center justify-content-end mb-4">
+  <button class="btn btn-primary" [routerLink]="['/add']">Nuevo Post</button>
 </div>
+
+<ccd-post-item
+  *ngFor="let post of posts$ | async; trackBy: trackByFn"
+  [post]="post"
+></ccd-post-item>
