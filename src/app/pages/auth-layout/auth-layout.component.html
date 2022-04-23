@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/']">CCDev App</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-flex justify-content-end align-items-center flex-fill">
+        <span class="p-2">example@mail.com</span>
+        <button class="btn btn-outline-danger" type="button">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="d-flex flex-column">
+  <router-outlet></router-outlet>
+</div>

@@ -8,8 +8,11 @@ import { AppComponent } from './app.component';
 import { CoreModule } from '@core/core.module';
 import { SharedModule } from '@shared/shared.module';
 
+// Pages
+import { AuthLayoutComponent } from './pages/auth-layout/auth-layout.component';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AuthLayoutComponent],
   imports: [BrowserModule, AppRoutingModule, CoreModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
