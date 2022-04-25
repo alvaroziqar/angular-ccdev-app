@@ -10,9 +10,10 @@ import { SharedModule } from '@shared/shared.module';
 
 // Pages
 import { AuthLayoutComponent } from './pages/auth-layout/auth-layout.component';
+import { LoginPageComponent } from './pages/login/login-page.component';
 
 @NgModule({
-  declarations: [AppComponent, AuthLayoutComponent],
+  declarations: [AppComponent, AuthLayoutComponent, LoginPageComponent],
   imports: [BrowserModule, AppRoutingModule, CoreModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],

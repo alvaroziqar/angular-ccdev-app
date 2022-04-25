@@ -5,6 +5,7 @@ import { State } from './state';
 
 const DEFAULT_STATE: State = {
   loading: false,
+  user: null,
   posts: null,
   selectedPost: null,
 };

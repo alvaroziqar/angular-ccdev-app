@@ -2,9 +2,14 @@
   <div class="container-fluid">
     <a class="navbar-brand" [routerLink]="['/']">CCDev App</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="d-flex justify-content-end align-items-center flex-fill">
-        <span class="p-2">example@mail.com</span>
-        <button class="btn btn-outline-danger" type="button">Logout</button>
+      <div
+        *ngIf="user$ | async as user"
+        class="d-flex justify-content-end align-items-center flex-fill"
+      >
+        <span class="p-2">{{ user.email }}</span>
+        <button (click)="logout()" class="btn btn-outline-danger" type="button">
+          Logout
+        </button>
       </div>
     </div>
   </div>
@@ -12,5 +17,3 @@
 <div class="d-flex flex-column p-4">
   <router-outlet></router-outlet>
 </div>
-<ccd-loading></ccd-loading>
-<ccd-toast></ccd-toast>

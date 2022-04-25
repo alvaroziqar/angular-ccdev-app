@@ -1,0 +1,31 @@
+<div class="login-container">
+  <h3>CCDev Login</h3>
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        formControlName="email"
+        type="text"
+        class="form-control"
+        id="email"
+        autocomplete="off"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        formControlName="password"
+        type="password"
+        class="form-control"
+        id="password"
+        autocomplete="off"
+      />
+    </div>
+
+    <div class="d-flex align-items-center justify-content-end">
+      <button [disabled]="form.invalid" class="btn btn-primary" type="submit">
+        Login
+      </button>
+    </div>
+  </form>
+</div>
