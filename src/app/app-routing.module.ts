@@ -14,6 +14,20 @@ const routes: Routes = [
             (m) => m.PostsListModule
           ),
       },
+      {
+        path: 'add',
+        loadChildren: () =>
+          import('./modules/posts-add/posts-add.module').then(
+            (m) => m.PostsAddModule
+          ),
+      },
+      {
+        path: 'edit/:id',
+        loadChildren: () =>
+          import('./modules/posts-edit/posts-edit.module').then(
+            (m) => m.PostsEditModule
+          ),
+      },
     ],
   },
 ];

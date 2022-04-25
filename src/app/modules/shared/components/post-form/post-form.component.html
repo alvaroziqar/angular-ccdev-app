@@ -1,0 +1,30 @@
+<div class="">
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Título</label>
+      <input
+        formControlName="title"
+        type="text"
+        class="form-control"
+        id="title"
+        autocomplete="off"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="body" class="form-label">Body</label>
+      <textarea
+        formControlName="body"
+        class="form-control"
+        id="body"
+        rows="3"
+        autocomplete="off"
+      ></textarea>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-end">
+      <button [disabled]="form.invalid" class="btn btn-primary" type="submit">
+        Guardar
+      </button>
+    </div>
+  </form>
+</div>

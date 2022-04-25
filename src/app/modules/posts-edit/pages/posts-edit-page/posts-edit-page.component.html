@@ -1,0 +1,6 @@
+<h3>Editar Post</h3>
+<ccd-post-form
+  *ngIf="selectedPost$ | async as selectedPost"
+  [post]="selectedPost"
+  (formSubmit)="onFormSubmit($event)"
+></ccd-post-form>

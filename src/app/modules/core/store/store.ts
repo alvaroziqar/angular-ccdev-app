@@ -4,7 +4,9 @@ import { distinctUntilChanged, map } from 'rxjs/operators';
 import { State } from './state';
 
 const DEFAULT_STATE: State = {
+  loading: false,
   posts: null,
+  selectedPost: null,
 };
 
 @Injectable({
